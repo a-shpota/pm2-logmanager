@@ -1,18 +1,20 @@
 {
-  "name": "sample-module",
+  "name": "pm2-logmanager",
   "version": "1.0.0",
-  "description": "PM2 Sample Module",
+  "description": "PM2 Logging manager",
   "main": "app.js",
   "dependencies": {
-    "pmx": "beta"
+    "pm2": "^4.5.0",
+    "pmx": "beta",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keymetrics/pmx.git"
+    "url": "https://github.com/a-shpota/pm2-logmanager.git"
   },
   "config": {
-    "conf_var_1": true,
-    "conf_var_2": "myvalue"
+    "configFile": "./pm2-logmanager.config.js"
   },
   "apps": [
     {
@@ -21,6 +23,6 @@
       "script": "app.js"
     }
   ],
-  "author": "Keymetrics Inc.",
+  "author": "Andrew Shpota",
   "license": "MIT"
 }
